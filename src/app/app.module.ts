@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
+import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
-    ProfileComponent
+    ProfileComponent,
+    TopnavbarComponent
   ],
   imports: [
     BrowserModule,
