@@ -8,16 +8,33 @@ div.container{
 div.container h1 h2{
    margin: 0;
 }
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+.form-control-lg{
+  height:4em !important;
+  width:30em;
+  background-color: black;
+  color:white;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
+#topnav{
+ background-color: #333;
+ height:2em;
+ color:white !important;
+ display:inline-block;
+ text-align: center;
+ font-size: 26px !important;
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+#bottomnav{
+ background-color: #333;
+ height:8em;
+ color:white !important;
+ display:inline-block;
+ text-align: center;
+ font-size: 20px !important;
+ }
+h1{
+  padding-left: 20%;
+  font-size: 30px;
+}
+img{
+  width:10%;
+  height:3%;
 }
