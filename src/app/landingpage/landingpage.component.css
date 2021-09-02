@@ -4,6 +4,7 @@ div.container{
   flex:row;
   align-items: center;
   justify-content: center;
+  padding-left:12em;
 }
 div.container h1 h2{
    margin: 0;
@@ -29,5 +30,13 @@ h1{
 }
 img{
   width:10%;
-  height:3%;
+  height:1%;
+}
+#topnav{
+ background-color: #333;
+ height:2em;
+ color:white !important;
+ display:inline-block;
+ text-align: center;
+ font-size: 26px !important;
 }
