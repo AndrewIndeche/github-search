@@ -17,7 +17,7 @@
      <div class="row">
        <div class="col-lg-6">
          <div class="sticky-top s-top" *ngIf="Profile">
-                   <div class="card no-border mb-3" style="max-width: 540px;">
+                   <div class="card no-border mb-3" style="max-width: 800px;">
              <div class="row no-gutters">
                <div class="col-md-4">
                  <img src="{{ Profile.avatar_url}}" class="img-fluid" alt="avatar" Id='avatar'>
@@ -74,29 +74,6 @@
                </div>
              </div>
            </div>
-
-           <div class="tab-pane fade" id="followers" role="tabpanel" aria-labelledby="nav-profile-tab">
-             <div *ngFor="let follower of followers">
-               <div style="margin-bottom: 10px;" class="media" appCardHover>
-                 <img class="profile-thumb" style="height:60px; width:60px;" src="{{ follower.avatar}}" class="mr-3" alt="avatar">
-                 <div class="media-body">
-                   <a href="{{follower.html_url}}" target="_blank"><h5 class="mt-0">{{ follower.login }}</h5></a>
-                 </div>
-               </div>
-             </div>
-           </div>
-
-           <div class="tab-pane fade" id="following" role="tabpanel" aria-labelledby="nav-contact-tab">
-             <div *ngFor="let follower of following">
-               <div style="margin-bottom: 10px;" class="media" appCardHover>
-                 <img class="profile-thumb" style="height:60px; width:60px;" src="{{ follower.avatar_url }}" class="mr-3" alt="avatar">
-                 <div class="media-body">
-                   <a href="{{follower.html_url}}" target="_blank"><h5 class="mt-0">{{ follower.login }}</h5></a>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-
+        </div>
        </div>
      </div>

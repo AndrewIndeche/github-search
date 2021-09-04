@@ -4,7 +4,7 @@ import { LandingpageComponent } from "./landingpage/landingpage.component";
 import { ProfileComponent } from "./profile/profile.component";
 
 const routes: Routes = [
-    {path:'landingpage',component:ProfileComponent},
+  
     {path:'landingpage',component:LandingpageComponent},
     {path:'profile',component:ProfileComponent},
 ];
