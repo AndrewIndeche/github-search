@@ -8,7 +8,7 @@ import { GitService } from 'src/app/git.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  userProfile:any;
+  Profile:any;
   repository:any;
   followers:any;
   following:any;
@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
   this.service.getProfileData()
     .subscribe(profile => {
       // console.log(profile);
-      this.userProfile = profile;
+      this.Profile = profile;
     }, error => {
       this.notFound = !this.notFound;
     });

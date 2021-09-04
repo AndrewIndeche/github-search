@@ -1,7 +1,7 @@
 export class Userprofile {
     constructor(public name:string,
       public login:string,
-      public avatar:string,
+      public avatar_url:string,
       public followers:string,
       public following:string,
       public repositories:number,
