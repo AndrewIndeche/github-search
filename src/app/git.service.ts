@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Userprofile } from './userprofile';
 import { Repository } from './repository';
-import {environment  } from 'src/environments/environment';
+import {Environment  } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,27 +10,26 @@ import {environment  } from 'src/environments/environment';
 })
 export class GitService {
   private username: string;
-  private token = environment['token'];
-  private clientId = environment.clientId;
-  private clientSecret = environment.clientSecret;
+  private token = Environment['token'];
+  private clientId = Environment.clientId;
 
   constructor(private http: HttpClient) { }
   getProfileData() {
     // return this.http.get(`https://api.github.com/users/${this.username}?access_token=${this.token}`);
-    return this.http.get(`https://api.github.com/users/${this.username}?${this.clientId}&client_secret=${this.clientSecret}`);
+    return this.http.get(`https://api.github.com/users/${this.username}?${this.clientId}`);
   }
 
   getRepoData() {
     // return this.http.get(`https://api.github.com/users/${this.username}/repos?access_token=${this.token}`);
-    return this.http.get(`https://api.github.com/users/${this.username}/repos?${this.clientId}&client_secret=${this.clientSecret}`);
+    return this.http.get(`https://api.github.com/users/${this.username}/repos?${this.clientId}`);
   }
 
   getFollowers() {
-    return this.http.get(`https://api.github.com/users/${this.username}/followers?${this.clientId}&client_secret=${this.clientSecret}`)
+    return this.http.get(`https://api.github.com/users/${this.username}/followers?${this.clientId}`)
   }
 
   getFollowing() {
-    return this.http.get(`https://api.github.com/users/${this.username}/following?${this.clientId}&client_secret=${this.clientSecret}`)
+    return this.http.get(`https://api.github.com/users/${this.username}/following?${this.clientId}`)
   }
 
   updateFields(username: string) {
