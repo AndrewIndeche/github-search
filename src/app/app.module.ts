@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GitService } from './git.service';
 import { ProfileComponent } from './profile/profile.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from './date.pipe';
+import { CardhoverDirective } from './cardhover.directive';
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { DatePipe } from './date.pipe';
     ProfileComponent,
     LandingpageComponent,
     DatePipe,
+    CardhoverDirective,
 
 
   ],
@@ -28,7 +31,7 @@ import { DatePipe } from './date.pipe';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [GitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

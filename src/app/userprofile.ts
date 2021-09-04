@@ -1,13 +1,13 @@
 export class Userprofile {
-    constructor(name:string,
-      login:string,
-      avatar:string,
-      followers:string,
-      following:string,
-      repositories:number,
-      bio:string,
-      location:string,
-      email:string,
-      created:Date
+    constructor(public name:string,
+      public login:string,
+      public avatar:string,
+      public followers:string,
+      public following:string,
+      public repositories:number,
+      public bio:string,
+      public location:string,
+      public email:string,
+      public created:Date
     ){}
 }

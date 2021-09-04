@@ -6,7 +6,7 @@
 <div class="container">
   <form #searchField="ngForm">
     <div class="form-group" style="display: flex">
-      <input [(ngModel)]="username" #user="ngModel" type="search" placeholder="search github username"
+      <input [(ngModel)]="username" #user="ngModel" type="search" placeholder="Type username and Press Enter on keyboard"
         name="username" class="form-control" style="border-right-style: none; border-radius: 0; border-color: #000" required>
       <button (click)="searchUser()" type="submit" class="btn btn-outline-dark btn-hov"
         style="border-left-style: none; border-radius: 0"><i class="fas fa-search" style="color: #000"></i></button>
@@ -19,7 +19,7 @@
            <div class="card no-border mb-3" style="max-width: 540px;">
              <div class="row no-gutters">
                <div class="col-md-4">
-                 <img src="{{ userProfile.avatar_url }}" class="card-img img-fluid" alt="avatar" width="100" height="180">
+                 <img src="{{ userProfile.avatar }}" class="card-img img-fluid" alt="avatar" width="100" height="180">
                </div>
                <div class="col-md-8">
                  <div class="card-body">
@@ -28,8 +28,8 @@
                    <p class="card-text"><span class="text-muted">Username:</span> {{ userProfile.login }}</p>
                    <p *ngIf="userProfile.bio" class="card-text"><span class="text-muted">Bio:</span> {{ userProfile.bio }}
                    </p>
-                   <p class="card-text"><span class="text-muted">Member since:</span>
-                     {{ userProfile.created_at | dateAgo }}</p>
+                   <p class="card-text"><span class="text-muted">Joined:</span>
+                     {{ userProfile.created_at | date}}</p>
                    <p *ngIf="userProfile.location" class="card-text"><i class="fas fa-map-marker-alt"></i>
                      {{ userProfile.location }}</p>
                    <p *ngIf="userProfile.blog" class="card-text"><i class="fas fa-link"></i><a
@@ -55,7 +55,6 @@
          </div>
        </div>
        <div class="col-lg-6">
-
          <nav *ngIf="userProfile" class="sticky-top s-top-nav bg-light">
            <div class="nav nav-tabs" id="nav-tab" role="tablist">
              <a *ngIf="userProfile" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#repos" role="tab" aria-controls="nav-home" aria-selected="true">Repos <span class="badge badge-secondary">{{ userProfile.public_repos }}</span></a>
@@ -78,7 +77,7 @@
                          class="fab fa-github"></i></button>
                    </a>
                    <div class="date">
-                     <small><span class="text-muted">last modified:</span> {{ repo.updated_at | dateAgo }}</small>
+                     <small><span class="text-muted">last modified:</span> {{ repo.updated_at | date }}</small>
                    </div>
                  </div>
                </div>
